@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="title text-center">Home page</h2>
+    <div class="row">
+        <div class="col" *ngFor="let c of peopleByCountry">
+            <div class="card country">
+                <p class="country">{{c.country}}</p>
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let p of c.people" class="list-group-item"> {{p.name}} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

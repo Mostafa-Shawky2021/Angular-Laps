@@ -1,0 +1,41 @@
+.product {
+    height: 603px;
+}
+.product .card {
+    height: 100% !important;
+
+}
+.product .image {
+    height: 300px;
+    overflow: hidden;
+}
+.product .image .avatar{
+ height: 100%;   
+ transition: all 0.8s;
+}
+.product .avatar:hover {
+    transform: scale(1.2)
+}
+
+.product .card-title {
+    color: #636363;
+    font-weight: bold;
+    cursor: pointer;
+}
+.product .card-text {
+    color: #666
+}
+.product .price {
+    color: #dc3545;
+    font-weight: bold;
+    text-align: right;
+}
+.product .custom-btn {
+    border: 1px solid #ccc;
+    margin-right: 11px;
+    padding: 1px 13px;
+}
+.product .custom-btn:hover {
+    background-color: #212224;
+    color: #fff;
+}

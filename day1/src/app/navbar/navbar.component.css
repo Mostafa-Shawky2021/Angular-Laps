@@ -1,0 +1,6 @@
+.navbar a {
+    color: #dfdfdf;
+}
+.navbar a.active {
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+<section class="todolist">
+    <h1 class="title">Todo List</h1>
+    <div class="content">
+        <div class="task-input d-flex mb-4 justify-content-between">
+            <div class="col-9 me-1">
+                <input type="text" placeholder="Enter Todo" class="form-control" #todoElement/>
+            </div>
+            <button class="btn btn-sm btn-primary" (click)= "addTodo()">Add Task</button>
+
+        </div>
+        <div class="task-filter mb-4 text-end">
+            <input (keydown)="filterTodo()"  #searchTodo type="text" placeholder="Search Task" class="form-control col-5 d-inline-block"/>
+        </div>
+        <div class="tasks">
+           
+            <div *ngIf=" filterTodos.length > 0 else todosWithoutFilter">
+                <div class="count">{{todos.length}}</div>
+                <div class="task-content d-flex  justify-content-between"  *ngFor="let todo of filterTodos" >
+                    <p class="task-name" >{{ todo.name}}</p>
+                    <button class="btn  btn-sm btn-success" (click) = "removeTodo(todo.id)">Complete</button>
+                </div>
+            </div>
+
+            <ng-template #todosWithoutFilter>
+                <div class="count">{{todos.length}}</div>
+                <div *ngIf="todos.length > 0 else nodata">
+                    <div class="task-content d-flex  justify-content-between"  *ngFor="let todo of todos" >
+                        <p class="task-name" >{{ todo.name}}</p>
+                        <button class="btn  btn-sm btn-success" (click) = "removeTodo(todo.id)">Complete</button>
+                    </div>
+                </div>
+                <ng-template #nodata>
+                    <p class="alert alert-danger">Sorry no todo to show</p>
+                </ng-template>
+
+
+            </ng-template>
+        </div>
+    </div>
+
+  
+</section>

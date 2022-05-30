@@ -1,0 +1,12 @@
+.title {
+    color: #5d5d5d;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.object-fit {
+    object-fit: cover
+}

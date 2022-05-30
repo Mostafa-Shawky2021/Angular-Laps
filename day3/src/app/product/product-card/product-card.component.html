@@ -1,0 +1,25 @@
+<div class="product mb-3">
+    <div class="card"> 
+        <!--Property binding to make connection between view and component-->
+        <div class="image">
+            <img [src] = "product?.image" class="card-img-top avatar object-fit" alt="..." />
+        </div>
+        <div class="card-body">
+        <a [routerLink]="['/productdetails',product?.id]" style="text-decoration:none">
+            <h5 class="card-title">{{product?.title}}</h5>
+        </a>
+        <p class="card-text">
+            {{product?.description | sliceDescription}}
+        </p>
+        </div>
+        <ul class="list-group list-group-flush">  
+            <li class="list-group-item price">Price:{{product?.price | currency:"USD"}} </li>
+            <li class="list-group-item p-3">
+                <a  class="add-cart btn custom-btn">Add to cart</a>
+                <a [routerLink]="['/productdetails',product?.id]" class="card-link btn custom-btn">Show product</a>
+            </li>
+        </ul>
+       
+    </div>
+</div>
+

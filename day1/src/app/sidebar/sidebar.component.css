@@ -1,0 +1,26 @@
+.sidebar {
+
+    margin-top: 57px;
+    
+}
+.sidebar h3 {
+    color: #747474;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.sidebar .box-content {
+    background-color: #eee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    margin-bottom: 19px;
+}
+
+.sidebar .box-content ul {
+    padding-left: 10px;
+}
+.sidebar .box-content li {
+    color: #727272;
+    font-weight: 500;
+    font-size: 13px;
+}
